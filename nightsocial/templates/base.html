@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Night Social</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'nightsocial/css/master.css'%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Russo+One&display=swap" rel="stylesheet">
   </head>
   <body>
-
     <nav class='navbar mynav' role='navigation' id='navbar'>
       <div class="container">
         <a class='navbar-brand mynav' href="{% url 'home' %}">Night Social</a>
-        <ul class='nav navbar-nav navbar-right'>
+        <ul class='navbar-toggler navbar-toggler-right'>
           {% if user.is_authenticated %}
             <li><a href="#">Post</a></li>
             <li><a href="#">Groups</a></li>
