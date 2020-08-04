@@ -7,7 +7,8 @@ from django.contrib.auth.mixins import (LoginRequiredMixin,PermissionRequiredMix
 from django.urls import reverse
 from django.views import generic
 from django.shortcuts import get_object_or_404
-from groups.models import Group,GroupMember
+from groups.models import Group,GroupMembers
+from . import models
 
 class CreateGroup(LoginRequiredMixin,generic.CreateView):
     fields = ('name','description')
